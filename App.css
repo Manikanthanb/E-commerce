@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.menu{
+  width: 80%;
+  text-align: left;
+  left: 100%;
+  position: fixed;
+  transition: 0.5s;
+  list-style: none;
+  height: 100vh;
+  background-color: goldenrod;
+}
+.activeMenu{
+  left: 0%;
+}
+.menu ul li{
+  list-style-type: none;
+  padding: 10px 0px;
+}
+.micon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  z-index: 1002;
+}
+
+.modalOverlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.modalShow {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modalDiv {
+  width: 320px;
+  height: 320px;
+  position: fixed;
+  top: -500px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: lemonchiffon;
+  transition: top 0.3s ease;
+  z-index: 1000;
+}
+.showmodalDiv {
+  top: 50%;
+}
+.en {
+  position: fixed;
+  right: -40px;
+  top: 120px;
+  transform: rotate(90deg);
+  background-color: #ff9800;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
